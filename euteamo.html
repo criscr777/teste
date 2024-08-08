@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta</title>
+    <style>
+        body {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #9e9e9e;
+        }
+        .container {
+            text-align: center;
+        }
+        .question {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 15px;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            outline: none;
+            transition: background-color 0.5s;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #127715;
+        }
+        .yes:hover {
+            background-color: #051f06;
+        }
+        .no {
+            background-color: #581510;
+            position: relative;
+            animation: move 2s infinite;
+        }
+        .no:hover {
+            background-color: #240c0b;
+        }
+        @keyframes move {
+            0% { transform: translateX(10); }
+            50% { transform: translateX(200px); }
+            100% { transform: translateX(10); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Você é minha namorada?</div>
+        <button class="button yes" onclick="window.location.href='http://127.0.0.1:5500/sally.html'">Sim</button>
+        <button class="button no" disabled>Não</button>
+    </div>
+
+
+</body>
+</html>
